@@ -61,7 +61,9 @@ Install with [npm](http://npmjs.org/):
     
     // If you want to use this storages on a modern browser,
     // you have to prepare "module.exports" object or "global" object
-    // on window namespace. (Using "[require-js](http://requirejs.org/)" or [foonyah](http://liberty-technology.biz/foonyahstation/docs/) is awesome!)
+    // on window namespace. 
+    // Ways to import module with using "[require-js](http://requirejs.org/)" 
+    // or "[foonyah](http://liberty-technology.biz/foonyahstation/docs/)" is awesome way for importing module.
     localStorage.setItem( ... )
 
 </script>

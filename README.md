@@ -63,10 +63,10 @@ Ways to import module with using "[require-js](http://requirejs.org/)"
 or "[foonyah](http://liberty-technology.biz/foonyahstation/docs/)" is awesome way for importing module.
   
 And more, functions to access "document.cookie" is attached to exports.  
-docCookie(document) ... change cookie document to arguments[0] provided.  
-keyCookie() ... get cookies key array.  
-setCookie(key, value, options) ... set a cookie value. options accepts <Object> or <Number> to given days of period.  
-getCookie(key) .. get a cookie value.  
+`docCookie(document)` ... change cookie document to arguments[0] provided.  
+`keyCookie()` ... get cookies key array.  
+`setCookie(key, value, options)` ... set a cookie value. options accepts <Object> or <Number> to given days of period.  
+`getCookie(key)` .. get a cookie value.  
   
 ```html
 <script type="text/javascript">

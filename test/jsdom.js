@@ -4,7 +4,7 @@ var jsdom = require("jsdom");
 var repo_nl = 'https://raw.github.com/ystskm/web-storages-js/';
 
 var scripts = [];
-scripts.push(repo_be + "master/web-storages.js");
+scripts.push(repo_nl + "master/web-storages.js");
 
 function setup(callback) {
   jsdom.env("<html><head></head><body></body></html>", {

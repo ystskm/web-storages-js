@@ -53,6 +53,7 @@
       return;
 
     if(is_window) {
+      exports.docCookie = docCookie;
       exports.keyCookie = keyCookie;
       exports.setCookie = setCookie;
       exports.getCookie = getCookie;
@@ -188,6 +189,10 @@
      */
     function s_length() {
       return Object.keys(this.hash).length;
+    }
+
+    function docCookie(doc) {
+      document = doc;
     }
 
     function keyCookie() {

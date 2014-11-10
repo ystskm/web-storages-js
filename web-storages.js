@@ -250,7 +250,6 @@
 
     function getCookie(key) {
       var cookie = is_window ? document.cookie: document.cookie || '';
-      console.log('getCookie', cookie)
       if(key && typeof cookie == 'string') {
 
         var i, cookies = cookie.split("; ");

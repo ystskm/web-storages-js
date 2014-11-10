@@ -50,21 +50,25 @@ Install with [npm](http://npmjs.org/):
 ```
     
 ### also use on browser
-
+  
+On browser, storages will attached to window automatically.  
+Now, almost all browsers have implemented web-storage, so that  
+native module is used in natural.  
+  
+If you want to use this storages on a modern browser,  
+you have to prepare "module.exports" object or "global" object  
+on window namespace.  
+  
+Ways to import module with using "[require-js](http://requirejs.org/)"  
+or "[foonyah](http://liberty-technology.biz/foonyahstation/docs/)" is awesome way for importing module.
+  
 ```html
-<script type="text/javascript" src="web-storages.js"></script>
 <script type="text/javascript">
 
-    // On browser, storages will attached to window automatically.
-    // Now, almost all browsers have implemented web-storage, so that
-    // native module is used in natural.
-    
-    // If you want to use this storages on a modern browser,
-    // you have to prepare "module.exports" object or "global" object
-    // on window namespace. 
-    // Ways to import module with using "[require-js](http://requirejs.org/)" 
-    // or "[foonyah](http://liberty-technology.biz/foonyahstation/docs/)" is awesome way for importing module.
-    localStorage.setItem( ... )
+    var src = 'https://raw.github.com/ystskm/web-storages-js/master/web-storages.js';
+    foonyah.require(src).done(function(){
+      localStorage.setItem( ... )
+    });
 
 </script>
 ```

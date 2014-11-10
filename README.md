@@ -9,7 +9,7 @@ Emulating localStorage and sessionStorage if not exist.
 
 Install with [npm](http://npmjs.org/):
 
-    npm install web-storage
+    npm install web-storages
     
 ## API - Set functions by args
 
@@ -67,18 +67,3 @@ Install with [npm](http://npmjs.org/):
 </script>
 ```
 
-## if you want to inherit Emitter to another *class*, use prototype chain.
-
-```js
-    // for Factory
-    var SubClass = function(){
-      NoleakEmitter.call(this);
-    }
-    for(var i in NoleakEmitter.prototype)
-      SubClass.prototype[i] = NoleakEmitter.prototype[i];
-
-    // for Singleton (not recommended)
-    var SubClass = function(){
-      this.__proto__.__proto__ = new NoleakEmitter();
-    }
-```

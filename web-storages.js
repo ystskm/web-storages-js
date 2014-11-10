@@ -209,9 +209,16 @@
         throw new Error('Cookie key failure.');
       }
     }
-    function setCookie(key, value, days) {
+    function setCookie(key, value, options) {
       var cookie = is_window ? document.cookie: document.cookie || '';
       if(typeof cookie == 'string') {
+
+        var opts = {};
+        if(typeof options == 'number')
+          opts.days = options;
+        else if(options && typeof options == 'object')
+          for( var k in options)
+            opts[k] = options[k];
 
         var i, cookies = cookie.split("; ");
         !cookies[0] && (cookies = []);// initial state
@@ -222,17 +229,25 @@
             break;
         }
 
-        days = days || 365;
+        var days = opts.days || 365;
+        var path = opts.path || '/';
 
         var nowtime = new Date().getTime();
-        var clear_time = new Date(nowtime + (60 * 60 * 24 * 1000 * days));
+        var expires = opts.expires || nowtime + (60 * 60 * 24 * 1000 * days);
+        var clear_time = new Date(expires);
 
         var kv = key + "=" + escape(value);
         var expires = clear_time.toGMTString();
 
-        if(is_window)
-          document.cookie = kv + "; expires=" + expires + "; path=/";
-        else {
+        if(is_window) {
+          var cookie_a = [kv, "expires=" + expires];
+
+          path && cookie_a.push("path=" + path);
+          opts.domain && cookie_a.push("domain=" + opts.domain);
+          opts.secure && cookie_a.push("secure");
+
+          document.cookie = cookie_a.join("; ");
+        } else {
           // cookie emulation (no matter for expires, path options)
           var in_cookies = 0 <= i && i < cookies.length;
           if(days <= 0)

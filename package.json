@@ -1,0 +1,30 @@
+{
+  "name": "web-storages",
+  "version": "0.1.0",
+  "author": {
+    "name": "Yoshitaka Sakamoto",
+    "url": "http://github.com/ystskm",
+    "email": "sakamoto@liberty-technology.biz"
+  },
+  "contributors": [],
+  "description": "An emulator for localStorage and sessionStorage",
+  "dependencies": {},
+  "devDependencies": {
+    "nodeunit": "*",
+    "nodeunit-ci": "*",
+    "jsdom": "*"
+  },
+  "keywords": ["util","storage","function"],
+  "main": "web-storages.js",
+  "repository": {
+    "url": "http://github.com/ystskm/web-storages-js",
+    "type": "git"
+  },
+  "licenses": [{
+      "type": "MIT",
+      "url": "https://github.com/ystskm/node-localelist/blob/master/LICENSE"
+  }],
+  "scripts": {
+    "test": "node test/_runner.js"
+  }
+}

@@ -1,4 +1,4 @@
-# web-storage
+# web-storages
   
 [![Version](https://badge.fury.io/js/web-storages.png)](https://npmjs.org/package/web-storages)
 [![Build status](https://travis-ci.org/ystskm/web-storages-js.png)](https://travis-ci.org/ystskm/web-storages-js)  

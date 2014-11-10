@@ -62,7 +62,7 @@ on window namespace.
 Ways to import module with using "[require-js](http://requirejs.org/)"  
 or "[foonyah](http://liberty-technology.biz/foonyahstation/docs/)" is awesome way for importing module.
   
-And more, functions to access "document.cookie" is attached to exports.  
+And more, 4 functions to access "document.cookie" are attached to exports.  
 `docCookie(document)` ... change cookie document to arguments[0] provided.  
 `keyCookie()` ... get cookies key array.  
 `setCookie(key, value, options)` ... set a cookie value. options accepts <Object> or <Number> to given days of period.  

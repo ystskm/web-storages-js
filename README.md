@@ -66,7 +66,7 @@ And more, 4 functions to access "document.cookie" are attached to exports.
 `docCookie(document)` ... change cookie document to arguments[0] provided.  
 `keyCookie()` ... get cookies key array.  
 `setCookie(key, value, options)` ... set a cookie value. options accepts <Object> or <Number> to given days of period.  
-`getCookie(key)` .. get a cookie value.  
+`getCookie(key)` ... get a cookie value.  
   
 ```html
 <script type="text/javascript">

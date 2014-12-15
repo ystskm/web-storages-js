@@ -1,5 +1,7 @@
 # web-storages
   
+[![Rank](https://nodei.co/npm/web-storages.png?downloads=true&amp;downloadRank=true&amp;stars=true)](https://nodei.co/npm/web-storages/)  
+  
 [![Version](https://badge.fury.io/js/web-storages.png)](https://npmjs.org/package/web-storages)
 [![Build status](https://travis-ci.org/ystskm/web-storages-js.png)](https://travis-ci.org/ystskm/web-storages-js)  
   
